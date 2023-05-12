@@ -1,2 +1,8 @@
 # NIM-System-PowerShell-DB2-SQL
-Custom Queries for IBM DB2 Database
+
+# Requirements
+- IBM DB2 ODBC DRIVER installed locally
+
+
+# Settings
+- DB2 installation path = C:\clidriver
