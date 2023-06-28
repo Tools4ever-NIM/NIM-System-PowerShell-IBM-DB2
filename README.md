@@ -1,4 +1,4 @@
-# NIM-System-PowerShell-DB2-SQL
+# NIM-System-PowerShell-IBM-DB2-SQL
 
 # Requirements
 - IBM DB2 ODBC DRIVER installed locally
