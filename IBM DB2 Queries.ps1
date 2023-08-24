@@ -72,6 +72,13 @@ function Idm-SystemInfo {
                 description = 'User account password to access server'
             }
             @{
+                name = 'timeout'
+                type = 'textbox'
+                label = 'Timeout'
+                description = 'O = no timeou'
+                value = '0'
+            }
+            @{
                 name = 'table_1_name'
                 type = 'textbox'
                 label = 'Query 1 - Name of Table'
@@ -437,6 +444,7 @@ function Idm-Dispatcher {
             foreach ($key in $keys_with_null_value) { $function_params[$key] = [System.DBNull]::Value }
             
             $sql_command = New-DB2Command $class_query
+            $sql_command.CommandTimeout = $SystemParams.timeout
             Invoke-DB2Command $sql_command
             Dispose-DB2Command $sql_command
 
