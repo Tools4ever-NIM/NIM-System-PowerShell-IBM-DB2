@@ -426,7 +426,7 @@ function Idm-Dispatcher {
            # $column_query = $class_query.replace("SELECT ","SELECT TOP 5 ")
 		   $column_query = $class_query + " FETCH FIRST 5 ROWS ONLY"
         
-            $columns = Fill-SqlInfoCache -Query $column_query
+            $columns = Fill-SqlInfoCache -Query $column_query -Timeout $SystemParams.timeout
         
             $Global:ColumnsInfoCache[$Class] = @{
                 primary_keys = @($columns | Where-Object { $_.is_primary_key } | ForEach-Object { $_.name })
@@ -464,11 +464,13 @@ function Fill-SqlInfoCache {
     param (
         [switch] $Force,
         [string] $Query,
-        [string] $Class
+        [string] $Class,
+        [string] $Timeout
     )
 
     # Refresh cache
     $sql_command = New-DB2Command $Query
+    $sql_command.CommandTimeout = $Timeout
     $result = (Invoke-DB2Command $sql_command) | Get-Member -MemberType Properties | Select-Object Name
     
     Dispose-DB2Command $sql_command
