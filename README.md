@@ -1,16 +1,12 @@
-# NIM-System-PowerShell-IBM-DB2-SQL
+# IBM DB2
 
-# Requirements
-- IBM DB2 ODBC DRIVER installed locally
-    - Download Driver https://www.ibm.com/support/pages/db2-odbc-cli-driver-download-and-installation-information#%5B%3Ch2%3E%5DDownload%5B%3C%2Fh2%3E%5D
-	    - Specifically vXX.XX.XX_ntx64_odbc_cli
-	- Create C:\Progam Files\IBM
-	- Extract clidriver contents to C:\Program Files\IBM
-	    - e.g "bin" folder should C:\Program Files\IBM
-	- Open Command Prompt, run installation command
-	`
-		cd "C:\Program Files\IBM\bin"
-		db2cli install -setup
-	`
-	
+## Data Tables
+- This is open ended. You can select any table from the database
 
+
+## Actions
+- Only restricted to privileges of the database account. Insert/Update/Delete are available for each table
+
+
+# NIM Docs
+The official NIM documentation can be found at: https://docs.nimsuite.com
