@@ -1,5 +1,7 @@
 # IBM DB2
 
+Read the [IBM DB2 integration documentation](https://docs.nimsuite.com/en/integrations/ibm-db2) for connector details and related guides.
+
 <img src="https://github.com/Tools4ever-NIM/NIM-System-PowerShell-IBM-DB2/assets/24281600/45356df9-1e2c-409e-aee0-ee4c92e45bc3" width="256px" />
 
 
